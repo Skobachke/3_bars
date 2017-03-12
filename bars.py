@@ -2,10 +2,10 @@ import json
 
 
 def load_data(filepath):
-    with open(filepath, 'r') as fh:  # открываем файл на чтение
-        pyObj = json.load(fh) # загружаем из файла данные в словарь
-        fh.close()  # Закрываем файл
-        return pyObj
+    with open(filepath, 'r') as js:  # открываем файл на чтение
+        python_data = json.load(js) # загружаем из файла данные в словарь
+        js.close()  # Закрываем файл
+        return python_data
 
 def get_biggest_bar(data):
     max_siats = 0
@@ -42,10 +42,10 @@ if __name__ == '__main__':
     latitude = float(input('Введите широту: '))
     longitude = float(input('Введите долготу: '))
     json_file = 'data-2897-2016-11-23.json'
-    data = load_data(json_file)
-    biggest_bar = get_biggest_bar(data)
-    smallest_bar = get_smallest_bar(data)
-    closest_bar = get_closest_bar(data, longitude, latitude)
+    data_from_json = load_data(json_file)
+    biggest_bar = get_biggest_bar(data_from_json)
+    smallest_bar = get_smallest_bar(data_from_json)
+    closest_bar = get_closest_bar(data_from_json, longitude, latitude)
     print ('Самый большой бар: ', biggest_bar)
     print ('Самый маленьикй бар: ', smallest_bar)
     print('самый близкий бар: ', closest_bar)
