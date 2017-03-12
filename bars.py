@@ -31,7 +31,6 @@ def get_closest_bar(data, longitude, latitude):
     for bar in data:
         differences = (float(bar['Longitude_WGS84'])-longitude) ** 2 +\
                         (float(bar['Latitude_WGS84'])-latitude) ** 2
-        print(differences)
         if differences < minimal_differences:
             minimal_differences = differences
             closest_bar = bar['Name']
