@@ -18,7 +18,9 @@
 ```#!bash
 
 $ python bars.py # possibly requires call of python3 executive instead of just python
-# FIXME вывести пример ответа скрипта
+Самый большой бар:  Спорт бар «Красная машина»
+Самый маленьикй бар:  БАР. СОКИ
+самый близкий бар:  Юнона
 
 ```
 
